@@ -1,0 +1,24 @@
+
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+#vgp{position:fixed;top:0;left:0;height:3px;width:0;z-index:99999;background:linear-gradient(90deg,#7aa2ff,#fff,#c58bff);box-shadow:0 0 14px #7aa2ff}
+.aur{animation:vgaur 18s ease-in-out infinite alternate}
+@keyframes vgaur{to{transform:translate3d(3%,-2%,0) scale(1.08);filter:hue-rotate(25deg)}}
+.vg-rv{opacity:0;transform:translateY(26px) scale(.985);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.vg-rv.in{opacity:1;transform:none}
+.vc,[class*="card"],[class*="tile"],.bento>*{position:relative;transform-style:preserve-3d;transition:transform .25s ease,box-shadow .3s,border-color .3s;will-change:transform}
+.vc:hover,[class*="card"]:hover,[class*="tile"]:hover{box-shadow:0 24px 60px -18px rgba(122,162,255,.35),0 0 0 1px rgba(255,255,255,.14)}
+.vg-gl{position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.14),transparent 60%)}
+.vc:hover>.vg-gl,[class*="card"]:hover>.vg-gl,[class*="tile"]:hover>.vg-gl{opacity:1}
+.vc.pop{background-image:linear-gradient(#10151c,#10151c),conic-gradient(from var(--ang),#7aa2ff,#fff,#c58bff,#7aa2ff);background-origin:border-box;background-clip:padding-box,border-box;border:1.5px solid transparent;animation:vgspin 6s linear infinite}
+@keyframes vgspin{to{--ang:360deg}}
+.btn.p,.btn.w{position:relative;overflow:hidden}
+.btn.p::after,.btn.w::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);animation:vgsh 3.8s ease-in-out infinite}
+@keyframes vgsh{60%,100%{transform:translateX(120%)}}
+.fab{animation:vgpulse 2.4s infinite}
+@keyframes vgpulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}80%,100%{box-shadow:0 0 0 22px rgba(37,211,102,0)}}
+#vgmq{flex:none;overflow:hidden;border-top:1px solid var(--line);background:rgba(255,255,255,.02);white-space:nowrap;padding:9px 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+#vgmq div{display:inline-block;animation:vgmq 38s linear infinite;color:var(--mu);font-size:11px;letter-spacing:.3em;text-transform:uppercase}
+#vgmq span{margin:0 22px}#vgmq i{color:#7aa2ff;font-style:normal}
+@keyframes vgmq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}.vg-rv{opacity:1;transform:none}}
+@media (hover:none){.vc,[class*="card"],[class*="tile"]{transform:none!important}}
